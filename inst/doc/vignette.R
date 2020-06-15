@@ -1,6 +1,7 @@
 ## ----setup, include=FALSE-----------------------------------------------------
 library(knitr)
 knitr::opts_chunk$set(echo = TRUE, fig.width = 7, fig.height = 7, fig.show = "hold")
+options("rgdal_show_exportToProj4_warnings" = "none") # to mute warnings of possible GDAL/OSR exportToProj4() degradation
 
 ## ----echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE----------------------
 loadedPackages <- c("sparrpowR", "rgdal")
@@ -25,12 +26,12 @@ plot(census,  main = "American Community Survey\n2018")
 plot(dcc, main = "Clipped Boundary")
 
 ## ----echo = TRUE, warning=FALSE, message=FALSE, cache=TRUE--------------------
-dcp <- sp::spTransform(dcc, CRS("+init=EPSG:32618"))
+dcp <- sp::spTransform(dcc, CRSobj = sp::CRS(projargs = "+init=EPSG:32618"))
 dco <- spatstat::as.owin(dcp)
 
 ## ----echo = TRUE, warning=FALSE, message=FALSE, cache=TRUE--------------------
 navy <- data.frame(lon = 326414.70444451, lat = 4304571.1539442)
-spf <- sp::SpatialPoints(coords = navy, proj4string = sp::CRS("+init=EPSG:32618"))
+spf <- sp::SpatialPoints(coords = navy, proj4string = sp::CRS(projargs = "+init=EPSG:32618"))
 # Plot
 sp::plot(dcp, main = "Location of Hypothetical\nDisease Cluster")
 sp::plot(spf, col = "red", add = T)
@@ -86,7 +87,7 @@ base_map <- ggmap::get_map(location = dcbb, maptype = "toner", source = "stamen"
 sim_pts <- sim_power$sim  # extract points from first iteration
 sim_pts <- maptools::as.SpatialPointsDataFrame.ppp(sim_pts) # convert to spatial data frame
 raster::crs(sim_pts) <- sp::proj4string(dcp) # set initial projection
-sim_pts_wgs84 <-  sp::spTransform(sim_pts, CRS("+init=epsg:4326")) # project to basemap
+sim_pts_wgs84 <-  sp::spTransform(sim_pts, CRSobj = sp::CRS(projargs = "+init=epsg:4326")) # project to basemap
 sim_pts_df <- tibble::tibble(data.frame(sim_pts_wgs84)) # convert to tidy data frame
 
 ## ----echo = TRUE, warning=FALSE, message=FALSE, cache=TRUE--------------------
