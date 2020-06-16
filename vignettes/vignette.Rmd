@@ -1,10 +1,10 @@
 ---
-title: "sparrpowR: Power Analysis to Detect Spatial Relative Risk Clusters"
+title: "sparrpowR: Power analysis to detect spatial relative risk clusters"
 author: 'Ian D. Buller (Github: @idblr)'
 date: "6/10/2020"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{sparrpowR*: power analysis to detect spatial relative risk clusters}
+  %\VignetteIndexEntry{sparrpowR: Power analysis to detect spatial relative risk clusters}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,7 +17,7 @@ options("rgdal_show_exportToProj4_warnings" = "none") # to mute warnings of poss
 
 Start with the necessary packages and seed for the vignette
 ```{r echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE}
-loadedPackages <- c("sparrpowR", "rgdal")
+loadedPackages <- c("broom", "geojsonio", "ggmap", "ggplot2", "grDevices", "maptools", "raster", "rgdal", "rgeos", "sp", "sparrpowR", "spatstat", "tibble")
 invisible(lapply(loadedPackages, require, character.only = TRUE))
 set.seed(1234) # for reproducibility
 ```
