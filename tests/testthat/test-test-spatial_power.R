@@ -23,7 +23,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -44,7 +43,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -65,7 +63,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -86,7 +83,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -107,7 +103,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -128,7 +123,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
   ) 
   
@@ -149,7 +143,6 @@ test_that("spatial_power throws error with invalid arguments", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = NULL,
-                             cascon = FALSE, 
                              verbose = FALSE)
   )   
   
@@ -175,9 +168,51 @@ test_that("spatial_power works", {
                              npc_control = 100,
                              e_control = 0,
                              sim_total = 2,
-                             cascon = FALSE, 
                              verbose = FALSE)
-  ) 
+  )
+  
+  expect_named(spatial_power(x_case = c(0.25),
+                             x_control = c(0.25),
+                             y_case = c(0.75),
+                             y_control = c(0.75),
+                             n_case = 10,
+                             n_control = 50,
+                             r_case = 0.1,
+                             r_control = 0.1,
+                             s_case = 0.05,
+                             s_control = 0.1,
+                             l_case = 200,
+                             l_control = 100,
+                             samp_case = "MVN", 
+                             samp_control = "MVN",
+                             npc_control = 100,
+                             e_control = 0,
+                             sim_total = 2,
+                             verbose = FALSE,
+                             p_correct = "Bonferroni")
+  )
+  
+  expect_named(spatial_power(x_case = c(0.25),
+                             x_control = c(0.25),
+                             y_case = c(0.75),
+                             y_control = c(0.75),
+                             n_case = 10,
+                             n_control = 50,
+                             r_case = 0.1,
+                             r_control = 0.1,
+                             s_case = 0.05,
+                             s_control = 0.1,
+                             l_case = 200,
+                             l_control = 100,
+                             samp_case = "MVN", 
+                             samp_control = "MVN",
+                             npc_control = 100,
+                             e_control = 0,
+                             sim_total = 2,
+                             parallel = TRUE,
+                             n_core = 2,
+                             verbose = FALSE)
+  )
   
 }
 )
