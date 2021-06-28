@@ -1,7 +1,7 @@
 Package: sparrpowR
 Title: Power Analysis to Detect Spatial Relative Risk Clusters
-Version: 0.2.1
-Date: 2021-03-15
+Version: 0.2.2
+Date: 2021-06-28
 Authors@R: 
     c(person(given = "Ian D.",
              family = "Buller",
@@ -34,7 +34,6 @@ Description: Calculate the statistical power to detect clusters using kernel-bas
         be found in J. F. Bithell (1991) <doi:10.1002/sim.4780101112>.
 License: Apache License (>= 2.0)
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.1.1
 Depends: R (>= 3.5.0), spatstat.geom, spatstat.core, spatstat.linnet,
         spatstat (>= 2.0-0)
@@ -46,11 +45,11 @@ Language: en-US
 URL: https://github.com/machiela-lab/sparrpowR
 BugReports: https://github.com/machiela-lab/sparrpowR/issues
 NeedsCompilation: no
-Packaged: 2021-03-16 01:44:19 UTC; bullerid
+Packaged: 2021-06-28 13:05:20 UTC; bullerid
 Author: Ian D. Buller [aut, cre, cph] (<https://orcid.org/0000-0001-9477-8582>),
   Derek W. Brown [aut, cph] (<https://orcid.org/0000-0001-8393-1713>),
   Mitchell J. Machiela [ctb] (<https://orcid.org/0000-0001-6538-9705>),
   Timothy A. Myers [ctb],
   NCI [cph, fnd]
 Repository: CRAN
-Date/Publication: 2021-03-16 09:50:02 UTC
+Date/Publication: 2021-06-28 13:30:02 UTC
