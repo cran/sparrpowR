@@ -1,6 +1,6 @@
-a20f1baa561c0d2418de70f345c8c57c *DESCRIPTION
+51c7a80554a4b17c77a1021ebca79c47 *DESCRIPTION
 9fb7f7c0b26d73432d3ea260410d8ace *NAMESPACE
-88076da6b58d6a8c006b24fdfe848460 *NEWS.md
+91044d74a4d268925bd90cc06d055ecf *NEWS.md
 f4bbfea1c535c9a87632199c12e1da8a *R/globals.R
 29d0c29a9e153bd1c411ca326c0ad610 *R/jitter_power.R
 fffcf16a83d30204cda9cc8d5e2de3a4 *R/package.R
@@ -11,7 +11,7 @@ d33dba086231ad26c64996ca8080b6a1 *R/spatial_power.R
 0437c204f4beddb97c3935bf16ff399f *R/utils.R
 7c3d9c1a0bed7dd867122eedcaba2ecb *R/zzz.R
 175441a235a7615722681b3a65599f8b *README.md
-3f0e5b30a05cc13c2997f838f8527bf2 *build/partial.rdb
+c7ed5da170fd04c16c7ae9669430cad5 *build/partial.rdb
 f4b6bb68341cc25b3e32211a532f4746 *build/vignette.rds
 58b3810baff94976fbabfeda07259517 *inst/CITATION
 63f8b1c69a0a806ebee0fc6dc955755f *inst/doc/vignette.html
@@ -30,10 +30,10 @@ d5a92a4791a93f08dd369ef778801e59 *man/spatial_data.Rd
 7451a530216af7ce79122431437c449b *man/spatial_plots.Rd
 df8c009c180445e8679ac358464a4da9 *man/spatial_power.Rd
 0622a97a2aaa3c342f09636052c2d7f5 *tests/spelling.R
-0ee18a57299658c9a062ae1d95a5ba6f *tests/testthat.R
-8b4431872d32594d99e34e5a145bb3ea *tests/testthat/test-jitter_power.R
+4a2093391fef1301f8d6f885c68fb28e *tests/testthat.R
+8bbe46bab7a748e2788cda4f35dd0fd2 *tests/testthat/test-jitter_power.R
 09d7ad2f66e758676a938ad5e805ffcd *tests/testthat/test-test-spatial_data.R
 c9d60cf0d54dfedd221272af9e5fa5ae *tests/testthat/test-test-spatial_plots.R
-1b83b47aef6460ca2aa8dd4ff2f87c06 *tests/testthat/test-test-spatial_power.R
+d2f4744239e0a5a7a392c944a2e59b52 *tests/testthat/test-test-spatial_power.R
 430ecfc5a3fd434036dc77d673be8651 *vignettes/vignette.Rmd
 6f79a812c742950b89e776dd413f9b81 *vignettes/vignette.html.asis
