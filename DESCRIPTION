@@ -1,7 +1,7 @@
 Package: sparrpowR
 Title: Power Analysis to Detect Spatial Relative Risk Clusters
-Version: 0.2.4
-Date: 2021-08-02
+Version: 0.2.5
+Date: 2022-02-04
 Authors@R: 
     c(person(given = "Ian D.",
              family = "Buller",
@@ -34,22 +34,22 @@ Description: Calculate the statistical power to detect clusters using kernel-bas
         be found in J. F. Bithell (1991) <doi:10.1002/sim.4780101112>.
 License: Apache License (>= 2.0)
 Encoding: UTF-8
-RoxygenNote: 7.1.1
-Depends: R (>= 3.5.0), spatstat.geom, spatstat.core, spatstat.linnet,
-        spatstat (>= 2.0-0)
+RoxygenNote: 7.1.2
+Depends: R (>= 3.5.0),
 Imports: doFuture, doRNG, fields, foreach, future, graphics, grDevices,
-        iterators, lifecycle, raster, sp, sparr, stats
-Suggests: testthat, spelling, R.rsp
+        iterators, lifecycle, raster, sp, sparr, spatstat.geom,
+        spatstat.random, stats
+Suggests: spatstat.data, testthat, spelling, R.rsp
 VignetteBuilder: R.rsp
 Language: en-US
 URL: https://github.com/machiela-lab/sparrpowR
 BugReports: https://github.com/machiela-lab/sparrpowR/issues
 NeedsCompilation: no
-Packaged: 2021-08-02 19:50:20 UTC; bullerid
+Packaged: 2022-02-04 17:18:40 UTC; bullerid
 Author: Ian D. Buller [aut, cre, cph] (<https://orcid.org/0000-0001-9477-8582>),
   Derek W. Brown [aut, cph] (<https://orcid.org/0000-0001-8393-1713>),
   Mitchell J. Machiela [ctb] (<https://orcid.org/0000-0001-6538-9705>),
   Timothy A. Myers [ctb],
   NCI [cph, fnd]
 Repository: CRAN
-Date/Publication: 2021-08-02 20:20:02 UTC
+Date/Publication: 2022-02-05 00:30:02 UTC
